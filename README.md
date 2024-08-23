@@ -7,7 +7,8 @@ This swing toast notifications use for java desktop application gui swing with f
 
 ## Install
 
-This library not available in maven, try use jar file, by copy to the root project `/library/swing-toast-notifications-1.0.3.jar`
+This library not available in maven, try use jar file, by copy to the root
+project `/library/swing-toast-notifications-1.0.3.jar`
 
 ``` xml
 <dependency>
@@ -18,7 +19,9 @@ This library not available in maven, try use jar file, by copy to the root proje
     <systemPath>${basedir}/library/swing-toast-notifications-1.0.3.jar</systemPath>
 </dependency>
 ```
+
 - Other library are use with this library
+
 ``` xml
 <dependency>
   <groupId>com.formdev</groupId>
@@ -32,6 +35,26 @@ This library not available in maven, try use jar file, by copy to the root proje
   <version>3.4.1</version>
 </dependency>
 ```
+
+## Maven
+
+Build package:
+
+```
+mvn package
+```
+
+Then install to .m2 local repository:
+
+```
+mvn install:install-file \
+      -Dfile=target/swing-toast-notifications-1.0.3.jar \
+      -DgroupId=raven.toast \
+      -DartifactId=swing-toast-notifications \
+      -Dversion=1.0.3 \
+      -Dpackaging=jar
+```
+
 ## Getting started
 
 - Import flatlaf library and flatlaf extras to your project
@@ -160,10 +183,13 @@ Visit flatlaf for more
 - [Flatlaf documentation](https://www.formdev.com/flatlaf/customizing/)
 
 ### Update Note
+
 - `version 1.0.1`
-  - add properties `Toast.maximumWidth`
-  - add properties `Toast.limit`
-  - add method `void clearHold()` and `void clearHold(Location location)`
+    - add properties `Toast.maximumWidth`
+    - add properties `Toast.limit`
+    - add method `void clearHold()` and `void clearHold(Location location)`
+
 ### Fixed Note
+
 - `version 1.0.1`
-  - fixed notification style properties background
+    - fixed notification style properties background
